@@ -4,7 +4,7 @@ public class AlaramTimer {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String[] tasks= {"Dring Water","Do Java Programs","Complete your Lunch","Watch Movie","Practice Codes"};
+		String[] tasks= {"Drink tea","Do Java Programs","Complete your Lunch","Watch Movie","Practice Codes"};
 		double[] times= {11.00,12.00,01.00,02.00,03.00};
 		String a="";
 		

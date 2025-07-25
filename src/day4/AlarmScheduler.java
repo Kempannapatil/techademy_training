@@ -10,8 +10,7 @@ abstract class HourlyAlarm {
     }
  public abstract void onAlarm();
 
- 
-    public void startAlarm() {
+  public void startAlarm() {
         TimerTask task = new TimerTask() {
             public void run() {
                 onAlarm();
@@ -23,9 +22,7 @@ abstract class HourlyAlarm {
         System.out.println("⏰ Alarm started. It will ring every hour.");
         timer.scheduleAtFixedRate(task, delay, interval);
     }
-
-    
-    public void stopAlarm() {
+ public void stopAlarm() {
         if (timer != null) {
             timer.cancel();
             System.out.println("🛑 Alarm stopped.");
@@ -39,7 +36,7 @@ class MyHourlyAlarm extends HourlyAlarm {
     @Override
     public void onAlarm() {
         System.out.println("⏰ Hourly Alarm: It's time! --> " + java.time.LocalTime.now());
-
+         stopAlarm();
 
     }
 }
@@ -47,6 +44,7 @@ public class AlarmScheduler {
     public static void main(String[] args) {
         HourlyAlarm alarm = new MyHourlyAlarm();
         alarm.startAlarm();
+        
 
        
         try {
