@@ -14,7 +14,7 @@ interface Group1
 interface Group2
 {
 	default void display() {
-		System.out.println("welcome to java");
+		System.out.println("welcome to java programming");
 	}
 	default void write() {
 		System.out.println("Start programming ");
@@ -26,11 +26,9 @@ class AllGroups implements  Group1,Group2{
 	public void display() {
    System.out.println("Practices daily improves ur coding");
    Group1.super.display();
-   Group2.super.
+   Group2.super.display();
     
  }
-
-
 
 }
 public class DefaultMethodInterface {
