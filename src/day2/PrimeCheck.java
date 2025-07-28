@@ -4,7 +4,7 @@ public class PrimeCheck {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		 int num = 13;
+		 int num = 83;
 	        boolean isPrime = true;
 
 	        for (int i = 2; i <= num / 2; i++) {
