@@ -21,8 +21,15 @@ public class Hashmap {
     //   capital.clear();
        System.out.println(capital);
        System.out.println( capital.size());
-       
-       
+       for(String i:capital.keySet()) {
+    	   System.out.println(i);
+       }
+       for(String i:capital.values()) {
+    	   System.out.println(i);
+       }
+       for(String i:capital.keySet()) {
+    	   System.out.println("Key: "+ i + ", value: " + capital.get(i));
+       }
 	}
 
 }
