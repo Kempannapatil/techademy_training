@@ -16,33 +16,44 @@ class Student
 		this.name=name;
 	}
 	public String toString() {
-		return "Student[age=" +age+ ",name=" +name+ "]";
+		return age+"-"+name;
 	}
+	
 	
 }
 public class Comparator_String {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Comparator<Student> com=new Comparator<Student>() {
-			public int compare(Student i, Student j) {
-				if(i.age>j.age)
-					return 1;
-				else
-					return -1;
-			}
-		};
+	
          List<Student> stud= new ArrayList<>();
          stud.add(new Student(22,"karthik"));
          stud.add(new Student(24,"Sanjeev"));
          stud.add(new Student(23,"Sunil"));
-         Collections.sort(stud,com);
          
+         Collections.sort(stud, new Comparator<Student>() {
+        	 public int compare(Student s1,Student s2) {
+        		 return s1.name.compareToIgnoreCase(s2.name);
+        	 }
+		});
+        		 
+         System.out.println("Sorting by names:");
+        
      for(Student s:stud) {
     	 System.out.println(s);
      }
      
+     Collections.sort(stud, new Comparator<Student>() {
+    	 public int compare(Student s1,Student s2) {
+    		 return Integer.compare(s1.age, s2.age);
+    	 }
+	});
+     		 System.out.println();
+     System.out.println("Sorting by Ages:");
      
+    
+      for(Student s:stud) {
+	 System.out.println(s);
+ }
          
 	}
 
